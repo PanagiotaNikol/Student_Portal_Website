@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" action="/query" novalidate>
+  <select name="query_type" class="form-select mb-2" required>
+    <option value="b1">Β1: Μαθήματα φοιτητή</option>
+    <option value="b2">Β2: Μαθήματα, διδάσκοντες, βαθμοί</option>
+    <option value="b3">Β3: Μαθήματα φοιτητή με διδάσκοντα</option>
+    <option value="b4">Β4: Πληροφορίες διδασκόντων και τμημάτων</option>
+    <option value="b5">Β5: Μέσος όρος όλων των μαθημάτων</option>
+    <option value="b6">Β6: Μέσος όρος περασμένων</option>
+    <option value="b7">Β7: Πτυχιακές διδάσκοντα</option>
+  </select>
+  <input name="value" class="form-control mb-2" placeholder="Όνομα ή Κωδικός (ή Φοιτητής,Καθηγητής για Β3)" required>
+  <button class="btn btn-success">Αναζήτηση</button>
+</form>
+{% endblock %}
+
+

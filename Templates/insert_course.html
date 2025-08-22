@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<form onsubmit="return validateForm()" method="post" novalidate>
+  <input name="course_id" placeholder="ID Μαθήματος" class="form-control mb-2" required>
+  <input name="course_name" placeholder="Όνομα Μαθήματος" class="form-control mb-2" required>
+  <input name="ects" placeholder="ECTS" class="form-control mb-2" type="number" min="0">
+  <input name="academic_program" placeholder="Πρόγραμμα Σπουδών" class="form-control mb-2">
+  <input name="category" placeholder="Κατηγορία" class="form-control mb-2">
+  <input name="course_weight" placeholder="Βαρύτητα" class="form-control mb-2" type="number" min="0">
+  <input name="semester" placeholder="Εξάμηνο" class="form-control mb-3" type="number" min="1" max="12">
+
+  <div class="d-flex">
+    <button type="submit" class="btn btn-primary me-2">Αποθήκευση</button>
+    <button type="reset" class="btn btn-secondary">Εκκαθάριση</button>
+  </div>
+</form>
+{% endblock %}
+
+
+
+
+<script>
+function validateForm() {
+  const inputs = document.querySelectorAll("form input[required]");
+  for (let input of inputs) {
+    if (!input.value.trim()) {
+      alert("Παρακαλώ συμπληρώστε όλα τα πεδία της φόρμας.");
+      return false;
+    }
+  }
+  return true;
+}
+</script>
