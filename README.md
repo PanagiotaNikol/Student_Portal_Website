@@ -95,11 +95,6 @@ pip install flask mysql-connector-python
 
 ---
 
-## 📷 Screenshots (Optional)
-*(You can add screenshots of your web app here to make the README more engaging.)*
-
----
-
 ## 🚀 Future Improvements
 - Add authentication for professors/students.  
 - Enhance the UI with CSS/JS frameworks (Bootstrap/Tailwind).  
