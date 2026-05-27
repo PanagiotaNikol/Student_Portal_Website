@@ -104,8 +104,6 @@ pip install flask mysql-connector-python
 
 ## 📄 License
 This project is for **educational purposes only** and uses **fake data**.  
-Feel free to use, modify, and share it under the terms of the MIT License.  
-
 
 ---
 
